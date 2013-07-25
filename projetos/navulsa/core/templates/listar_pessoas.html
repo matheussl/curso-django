@@ -1,0 +1,9 @@
+<h1>Pessoas cadastradas</h1>
+
+<a href="{% url "cadastrar_pessoa" %}">cadastrar</a>
+
+<ul>
+{% for pessoa in pessoas %}
+    <li>{{ pessoa.nome }} - <a href="{% url "edita_pessoa" pessoa.id %}">editar</a></li>
+{% endfor %}
+</ul>

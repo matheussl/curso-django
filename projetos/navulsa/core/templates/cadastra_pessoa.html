@@ -1,0 +1,8 @@
+{% url "cadastrar_pessoa" as cadastrar_pessoa %}
+
+<form action="{{ cadastrar_pessoa }}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br />
+    <input type="submit" value="cadastrar"/>
+</form>
