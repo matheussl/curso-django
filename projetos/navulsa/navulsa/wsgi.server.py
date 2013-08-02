@@ -6,8 +6,8 @@ import site
 site.addsitedir('/home/vagrant/.virtualenvs/navulsa/lib/python2.6/site-packages')
 
 # Add the app's directory to the PYTHONPATH
-sys.path.append('/home/vagrant/django_projects/curso/navulsa')
-sys.path.append('/home/vagrant/django_projects/curso/navulsa/navulsa')
+sys.path.append('/home/vagrant/django_projects/curso/projetos/navulsa')
+sys.path.append('/home/vagrant/django_projects/curso/projetos/navulsa/navulsa')
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'navulsa.settings'
 
