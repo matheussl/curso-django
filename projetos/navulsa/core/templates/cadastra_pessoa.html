@@ -1,8 +1,19 @@
+{% extends "base.html" %}
+
 {% url "cadastrar_pessoa" as cadastrar_pessoa %}
 
-<form action="{{ cadastrar_pessoa }}" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <br />
-    <input type="submit" value="cadastrar"/>
-</form>
+
+{% block conteudo %}
+    <form action="{{ cadastrar_pessoa }}" method="POST" class="form-horizontal">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            {{ form.nome.label_tag }}
+            <div class="col-lg-2">
+                {{ form.nome }}
+            </div>
+        </div>
+        <br />
+        <input type="submit" value="cadastrar"/>
+    </form>
+{% endblock %}

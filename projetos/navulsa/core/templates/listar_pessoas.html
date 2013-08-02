@@ -1,9 +1,14 @@
-<h1>Pessoas cadastradas</h1>
+{% extends "base.html" %}
 
-<a href="{% url "cadastrar_pessoa" %}">cadastrar</a>
 
-<ul>
-{% for pessoa in pessoas %}
-    <li>{{ pessoa.nome }} - <a href="{% url "edita_pessoa" pessoa.id %}">editar</a></li>
-{% endfor %}
-</ul>
+{% block conteudo %}
+    <h1>Pessoas cadastradas</h1>
+
+    <a href="{% url "cadastrar_pessoa" %}">cadastrar</a>
+
+    <ul>
+    {% for pessoa in pessoas %}
+        <li>{{ pessoa.nome }} - <a href="{% url "edita_pessoa" pessoa.id %}">editar</a> &nbsp;&nbsp;&nbsp;<a href="{% url "exibe_pessoa" pessoa.id %}">exibir</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
